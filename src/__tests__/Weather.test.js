@@ -18,7 +18,7 @@ describe("Weather.jsx", () => {
         }
       });
 
-      axiosSpy = jest.spyOn(axios, "get")
+    axiosSpy = jest.spyOn(axios, "get")
       .mockResolvedValueOnce(openCageResponse)
       .mockResolvedValueOnce(openWeatherResponse)
 
@@ -37,7 +37,7 @@ describe("Weather.jsx", () => {
     expect(screen.getByText('You are in Stockholm')).toBeInTheDocument();
   });
 
-  it.only("is expected to render temperature", () => {
-    expect(screen.getByText('Current temperature is 10°C')).toBeInTheDocument();
+  it("is expected to render temperature", () => {
+    expect(screen.getByText('Your current temperature is 10°C')).toBeInTheDocument();
   });
 });

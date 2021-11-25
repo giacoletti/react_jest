@@ -1,4 +1,4 @@
-export const OpenWeatherResponse = {
+export const openWeatherResponse = {
 
   data: {
     "lat": 59.4057,
@@ -9,7 +9,7 @@ export const OpenWeatherResponse = {
       "dt": 1637749315,
       "sunrise": 1637737437,
       "sunset": 1637762784,
-      "temp": 277.65,
+      "temp": 10,
       "feels_like": 277.65,
       "pressure": 1010,
       "humidity": 85,

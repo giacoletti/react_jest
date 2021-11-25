@@ -38,16 +38,12 @@ class Weather extends Component {
         }
       });
 
-    // console.log(config.OPEN_CAGE_API_KEY);
     this.setState({
       weatherInfo: {
         city: openCageResponse.data.results[0].components.city,
-        // temperature: openWeatherResponse.data.current.temp   //this is giving me an error and driving me nuts.
+        temperature: openWeatherResponse.data.current.temp
       }
     });
-
-    console.log(this.state.weatherInfo.city)
-    console.log(this.state.weatherInfo.temperature)
   };
 
   render() {
@@ -59,7 +55,8 @@ class Weather extends Component {
               <h1>You are in {this.state.weatherInfo.city}</h1>
               <h2>Your current temperature is {this.state.weatherInfo.temperature}°C</h2>
             </React.Fragment>
-          )}
+          )
+        }
       </React.Fragment>
     );
   };
